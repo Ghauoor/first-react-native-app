@@ -13,12 +13,7 @@ const HandleUserInput = () => {
         defaultValue={text}
       />
       <Text style={{padding: 10, fontSize: 50}}>
-        {
-          text
-            .split(' ')
-            .map(word => word && '🐞')
-            .join(' ').length
-        }
+        {text.split(' ').map(word => word && '🐞')}
       </Text>
     </View>
   );
