@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
 
-const PizzaTranslator = () => {
+const HandleUserInput = () => {
   const [text, setText] = useState('');
+
   return (
     <View style={{padding: 10}}>
       <TextInput
@@ -11,14 +12,16 @@ const PizzaTranslator = () => {
         onChangeText={newText => setText(newText)}
         defaultValue={text}
       />
-      <Text style={{padding: 10, fontSize: 42}}>
-        {text
-          .split(' ')
-          .map(word => word && '🍕')
-          .join(' ')}
+      <Text style={{padding: 10, fontSize: 50}}>
+        {
+          text
+            .split(' ')
+            .map(word => word && '🐞')
+            .join(' ').length
+        }
       </Text>
     </View>
   );
 };
 
-export default PizzaTranslator;
+export default HandleUserInput;
